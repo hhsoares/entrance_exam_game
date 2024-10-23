@@ -7,7 +7,8 @@ var score : int
 const SCORE_MODIFIER : int = 10
 var speed  : float
 const START_SPEED  : float = 1
-const MAX_SPEED  : int = 5
+const MAX_SPEED  : int = 4
+const SPEED_MODIFIER : int = 800
 var screen_size : Vector2i
 var game_running : bool
 
@@ -31,7 +32,11 @@ func new_game():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if game_running:
-		speed = START_SPEED
+		speed = START_SPEED + score / SPEED_MODIFIER
+		if speed > MAX_SPEED:
+			speed = MAX_SPEED
+		
+		print(speed)
 		
 		$Dino.position.x += speed
 		$Camera2D.position.x += speed
