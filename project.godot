@@ -19,7 +19,4 @@ config/icon="res://icon.svg"
 
 window/size/viewport_width=320
 window/size/viewport_height=240
-window/size/resizable=false
-window/size/window_width_override=1600
-window/size/window_height_override=1200
 window/stretch/mode="canvas_items"
