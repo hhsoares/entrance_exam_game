@@ -1,1 +1,3 @@
-<iframe width="560" height="315" src="https://www.youtube.com/embed/nKBhz6oJYsc?si=02Qk4Bg_BwsOe_Yk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+Jogo para o vestibular da FACAMP 2024.
+
+Feito com base no tutorial: https://youtu.be/nKBhz6oJYsc?si=MkCgOchMK28Mb9Fl
