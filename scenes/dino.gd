@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
-const GRAVITY : int = 4200
-const JUMP_SPEED : int = -1000
+const GRAVITY : int = 5000
+const JUMP_SPEED : int = -1200
 
 func _physics_process(delta):
 	velocity.y += GRAVITY * delta
@@ -19,5 +19,8 @@ func _physics_process(delta):
 				$AnimatedSprite2D.play("run")
 	else:
 		$AnimatedSprite2D.play("jump")
+		if Input.is_action_pressed("ui_down"):
+				$AnimatedSprite2D.play("duck")
+				velocity.y = JUMP_SPEED * -1
 		
 	move_and_slide()

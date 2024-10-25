@@ -15,7 +15,7 @@ script = ExtResource("1_cogep")
 [node name="Ground" parent="." instance=ExtResource("2_jup88")]
 
 [node name="Dino" parent="." instance=ExtResource("3_ohwj3")]
-position = Vector2(61, 187)
+position = Vector2(61, 186)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(160, 120)

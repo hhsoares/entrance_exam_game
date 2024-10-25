@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dca655dn7ie2y"]
+[gd_scene load_steps=7 format=3 uid="uid://dca655dn7ie2y"]
 
 [ext_resource type="FontFile" uid="uid://dpo81lqlnhvsh" path="res://assets/fonts/retro.ttf" id="1_fntnp"]
 
@@ -10,6 +10,12 @@ bg_color = Color(2.79158e-06, 0.859875, 0.214199, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ovang"]
 bg_color = Color(6.257e-07, 0.479395, 0.101854, 1)
+
+[sub_resource type="InputEventAction" id="InputEventAction_p3h6n"]
+action = &"restart"
+
+[sub_resource type="Shortcut" id="Shortcut_tamiw"]
+events = [SubResource("InputEventAction_p3h6n")]
 
 [node name="GameOver" type="CanvasLayer"]
 
@@ -30,4 +36,5 @@ theme_override_font_sizes/font_size = 15
 theme_override_styles/hover = SubResource("StyleBoxFlat_1np2o")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_l4cap")
 theme_override_styles/normal = SubResource("StyleBoxFlat_ovang")
-text = "RESTART"
+shortcut = SubResource("Shortcut_tamiw")
+text = "PRESS R TO RESTART"

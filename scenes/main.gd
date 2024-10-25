@@ -4,11 +4,11 @@ var stump_scene = preload("res://scenes/stump.tscn")
 var rock_scene = preload("res://scenes/rock.tscn")
 var barrel_scene = preload("res://scenes/barrel.tscn")
 var bird_scene = preload("res://scenes/bird.tscn")
-var obstacle_types := [stump_scene, rock_scene, barrel_scene]
+var obstacle_types := [barrel_scene]
 var obstacles : Array
-var bird_heights := [100, 300]
+var bird_heights := [20, 350]
 
-const DINO_START_POS := Vector2i(61, 187)
+const DINO_START_POS := Vector2i(61, 186)
 const CAM_START_POS := Vector2i(160, 120)
 var difficulty
 const MAX_DIFFICULTY : int = 2
@@ -18,7 +18,7 @@ var high_score : int
 var speed  : float
 const START_SPEED  : float = 2
 const MAX_SPEED  : int = 4
-const SPEED_MODIFIER : int = 800
+const SPEED_MODIFIER : int = 900
 var screen_size : Vector2i
 var ground_height : int
 var game_running : bool
@@ -28,6 +28,7 @@ var last_obs
 func _ready():
 	screen_size = get_window().size
 	ground_height = $Ground.get_node("Sprite2D").texture.get_height()
+	
 	$GameOver.get_node("Button").pressed.connect(new_game)
 	new_game() # Replace with function body.
 
