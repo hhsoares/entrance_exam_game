@@ -6,18 +6,18 @@ var barrel_scene = preload("res://scenes/barrel.tscn")
 var bird_scene = preload("res://scenes/bird.tscn")
 var obstacle_types := [barrel_scene]
 var obstacles : Array
-var bird_heights := [20, 350]
+var bird_heights := [30, 170]
 
 const DINO_START_POS := Vector2i(61, 186)
 const CAM_START_POS := Vector2i(160, 120)
 var difficulty
-const MAX_DIFFICULTY : int = 2
+const MAX_DIFFICULTY : int = 4
 var score : int
 const SCORE_MODIFIER : int = 10
 var high_score : int
 var speed  : float
-const START_SPEED  : float = 2
-const MAX_SPEED  : int = 4
+const START_SPEED  : float = 7
+const MAX_SPEED  : int = 11
 const SPEED_MODIFIER : int = 900
 var screen_size : Vector2i
 var ground_height : int
@@ -83,7 +83,7 @@ func generate_obs():
 	if obstacles.is_empty() or last_obs.position.x < score + randi_range(30, 50):
 		var obs_type = obstacle_types[randi() % obstacle_types.size()]
 		var obs
-		var max_obs = difficulty + 1
+		var max_obs = 2
 		for i in range(randi() % max_obs + 1):
 			obs = obs_type.instantiate()
 			var obs_height = obs.get_node("Sprite2D").texture.get_height()
