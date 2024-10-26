@@ -49,7 +49,9 @@ func new_game():
 	$Ground.position = Vector2i(0, 0)
 
 	$HUD.get_node("StartLabel").show()
+	$HUD.get_node("CreditsLabel").show()
 	$GameOver.hide()
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -78,6 +80,7 @@ func _process(delta):
 		if Input.is_action_pressed("ui_accept"):
 			game_running = true
 			$HUD.get_node("StartLabel").hide()
+			$HUD.get_node("CreditsLabel").hide()
 
 func generate_obs():
 	if obstacles.is_empty() or last_obs.position.x < score + randi_range(30, 50):
